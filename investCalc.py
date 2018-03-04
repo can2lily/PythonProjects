@@ -10,21 +10,21 @@ Assignment Chapter 9
 
 
 #imports tinker program
-from tkinter import * 
+from tkinter import *
 
 class Main:
-    
+
     #computing future value
     def computeFuture(self):
         #getting monthly interest rate
         monthlyIntRate = float(self.annualIntRate.get()) / 1200
         #getting future value and assigning it to f
         f = float(self.investAmnt.get()) * (1 + monthlyIntRate) ** (float(self.years.get()) * 12)
-        #formating the variable, 10 spaces  before decimal only 2 after decimal 
+        #formating the variable, 10 spaces  before decimal only 2 after decimal
         self.futureVal.set("{0:10.2f}".format(f))
-        
+
     def __init__(self):
-        
+
         #creating window
         window = Tk()
         window.title("Investment-value calculator")
@@ -58,4 +58,4 @@ class Main:
         window.mainloop()
 
 Main()
-        
+
